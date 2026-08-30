@@ -1,520 +1,576 @@
 /**
  * ============================================================
- * JAVA RELATIONAL OPERATORS
+ * JAVA LOGICAL OPERATORS
  * ============================================================
  *
- * Relational operators are used to compare two values.
+ * Logical operators are used to combine multiple conditions
+ * and produce a single boolean result.
  *
- * The result of a relational operation is always a boolean
- * value:
+ * A condition normally produces:
  *
  * true
  * false
  *
- * Example:
- *
- * 7 < 5
- *
- * Result:
- *
- * false
+ * Logical operators allow us to combine these conditions.
  *
  * Example:
  *
- * 5 < 6
- *
- * Result:
- *
- * true
- *
- *
- * ============================================================
- * 1. RELATIONAL OPERATORS
- * ============================================================
- *
- * Java provides the following relational operators:
- *
- * < Less than
- * > Greater than
- * == Equal to
- * != Not equal to
- * <= Less than or equal to
- * >= Greater than or equal to
- *
- *
- * ============================================================
- * 2. LESS THAN (<)
- * ============================================================
- *
- * The < operator checks whether the first value is less than
- * the second value.
- *
- * Example:
- *
- * 5 < 6
- *
- * Result:
- *
- * true
- *
- * Example:
- *
- * 6 < 5
- *
- * Result:
- *
- * false
- *
- *
- * ============================================================
- * 3. GREATER THAN (>)
- * ============================================================
- *
- * The > operator checks whether the first value is greater
- * than the second value.
- *
- * Example:
- *
- * 6 > 5
- *
- * Result:
- *
- * true
- *
- * Example:
- *
- * 5 > 6
- *
- * Result:
- *
- * false
- *
- *
- * ============================================================
- * 4. EQUAL TO (==)
- * ============================================================
- *
- * The == operator is used to compare two values.
- *
- * IMPORTANT:
- *
- * = -> Assignment operator
- * == -> Comparison operator
- *
- * Example:
- *
- * int x = 6;
- *
- * Here '=' assigns 6 to x.
- *
- * To check whether two values are equal:
- *
- * x == y
- *
- * Example:
- *
- * 6 == 6
- *
- * Result:
- *
- * true
- *
- * Example:
- *
- * 6 == 5
- *
- * Result:
- *
- * false
- *
- *
- * ============================================================
- * 5. NOT EQUAL TO (!=)
- * ============================================================
- *
- * The != operator checks whether two values are not equal.
- *
- * Example:
- *
- * 6 != 5
- *
- * Result:
- *
- * true
- *
- * Example:
- *
- * 6 != 6
- *
- * Result:
- *
- * false
- *
- * The ! symbol represents NOT in this operator.
- *
- *
- * ============================================================
- * 6. LESS THAN OR EQUAL TO (<=)
- * ============================================================
- *
- * The <= operator checks whether the first value is:
- *
- * 1. Less than the second value
- * OR
- * 2. Equal to the second value
- *
- * Example:
- *
- * 5 <= 6
- *
- * Result:
- *
- * true
- *
- * Example:
- *
- * 6 <= 6
- *
- * Result:
- *
- * true
- *
- * Example:
- *
- * 7 <= 6
- *
- * Result:
- *
- * false
- *
- *
- * ============================================================
- * 7. GREATER THAN OR EQUAL TO (>=)
- * ============================================================
- *
- * The >= operator checks whether the first value is:
- *
- * 1. Greater than the second value
- * OR
- * 2. Equal to the second value
- *
- * Example:
- *
- * 7 >= 6
- *
- * Result:
- *
- * true
- *
- * Example:
- *
- * 6 >= 6
- *
- * Result:
- *
- * true
- *
- * Example:
- *
- * 5 >= 6
- *
- * Result:
- *
- * false
- *
- *
- * ============================================================
- * 8. RELATIONAL OPERATORS - QUICK TABLE
- * ============================================================
- *
- * Operator Meaning
- *
- * < Less than
- * > Greater than
- * == Equal to
- * != Not equal to
- * <= Less than or equal to
- * >= Greater than or equal to
- *
- *
- * ============================================================
- * 9. RELATIONAL OPERATORS RETURN BOOLEAN
- * ============================================================
- *
- * Relational operators always produce a boolean result.
- *
- * Example:
- *
- * int x = 6;
- * int y = 5;
- *
- * boolean result = x < y;
- *
- * Since:
- *
- * 6 < 5
- *
- * is false:
- *
- * result = false;
- *
- *
- * Example:
- *
- * boolean result = x > y;
- *
- * Since:
- *
- * 6 > 5
- *
- * is true:
- *
- * result = true;
- *
- *
- * ============================================================
- * 10. USING RELATIONAL OPERATORS IN CODE
- * ============================================================
- *
- * Example:
- *
- * int x = 6;
- * int y = 5;
- *
- * boolean result = x < y;
- *
- * System.out.println(result);
- *
- * Output:
- *
- * false
- *
- *
- * Example:
- *
- * int x = 6;
- * int y = 5;
- *
- * boolean result = x > y;
- *
- * System.out.println(result);
- *
- * Output:
- *
- * true
- *
- *
- * ============================================================
- * 11. COMPARING EQUAL VALUES
- * ============================================================
- *
- * Example:
- *
- * int x = 6;
- * int y = 6;
- *
- * boolean result = x == y;
- *
- * Output:
- *
- * true
- *
- * If:
- *
- * int x = 6;
- * int y = 5;
- *
- * boolean result = x == y;
- *
- * Output:
- *
- * false
- *
- *
- * ============================================================
- * 12. COMPARING DOUBLE VALUES
- * ============================================================
- *
- * Relational operators can also be used with other
- * primitive numeric values such as double.
- *
- * Example:
- *
- * double x = 8.8;
- * double y = 9.8;
- *
- * boolean result = x <= y;
- *
- * Output:
- *
- * true
- *
- * Example:
- *
- * boolean result = x > y;
- *
- * Output:
- *
- * false
- *
- *
- * ============================================================
- * 13. ASSIGNMENT VS EQUALITY
- * ============================================================
- *
- * This is one of the most important things to remember.
- *
- *
- * Assignment:
- *
- * =
- *
- * Used to assign a value.
- *
- * Example:
- *
- * int x = 5;
- *
- *
- * Equality comparison:
- *
- * ==
- *
- * Used to compare two values.
- *
- * Example:
- *
- * x == 5
- *
- *
- * Remember:
- *
- * = -> Put/assign a value
- * == -> Compare two values
- *
- *
- * ============================================================
- * 14. RELATIONAL OPERATORS WITH TWO CONDITIONS
- * ============================================================
- *
- * Relational operators can be used to create individual
- * conditions.
- *
- * Example:
- *
- * int x = 8;
- * int y = 6;
- *
- * x < y
- *
- * This is one condition.
- *
- * Another condition can be:
- *
- * int a = 8;
- * int b = 6;
- *
+ * x > y
  * a < b
  *
- * When we need to combine multiple conditions, Java provides
- * logical operators.
+ * Each condition produces true or false.
+ *
+ * We can combine them using logical operators.
+ *
+ *
+ * ============================================================
+ * 1. TYPES OF LOGICAL OPERATORS
+ * ============================================================
+ *
+ * Java provides three basic logical operations:
+ *
+ * AND
+ * OR
+ * NOT
+ *
+ *
+ * Their operators are:
+ *
+ * && -> Logical AND
+ * || -> Logical OR
+ * ! -> Logical NOT
+ *
+ *
+ * ============================================================
+ * 2. LOGICAL AND (&&)
+ * ============================================================
+ *
+ * AND is used when ALL conditions must be true.
  *
  * Example:
  *
  * condition1 && condition2
  *
- * Logical operators are used to combine conditions.
+ * The result is true only when BOTH conditions are true.
+ *
+ *
+ * Truth Table:
+ *
+ * Condition 1 Condition 2 Result
+ * --------------------------------------
+ * true true true
+ * true false false
+ * false true false
+ * false false false
+ *
+ *
+ * Remember:
+ *
+ * AND -> Both must be true.
+ *
+ *
+ * Example:
+ *
+ * int x = 7;
+ * int y = 5;
+ *
+ * int a = 5;
+ * int b = 9;
+ *
+ * boolean result = x > y && a > b;
+ *
+ * First condition:
+ *
+ * x > y
+ * 7 > 5
+ * true
+ *
+ * Second condition:
+ *
+ * a > b
+ * 5 > 9
+ * false
+ *
+ * Therefore:
+ *
+ * true && false
+ * = false
+ *
+ *
+ * ============================================================
+ * 3. LOGICAL OR (||)
+ * ============================================================
+ *
+ * OR is used when at least ONE condition must be true.
+ *
+ * Example:
+ *
+ * condition1 || condition2
+ *
+ * The result is false only when BOTH conditions are false.
+ *
+ *
+ * Truth Table:
+ *
+ * Condition 1 Condition 2 Result
+ * --------------------------------------
+ * true true true
+ * true false true
+ * false true true
+ * false false false
+ *
+ *
+ * Remember:
+ *
+ * OR -> At least one must be true.
+ *
+ *
+ * Example:
+ *
+ * int x = 7;
+ * int y = 5;
+ *
+ * int a = 5;
+ * int b = 9;
+ *
+ * boolean result = x > y || a > b;
+ *
+ * First condition:
+ *
+ * x > y
+ * 7 > 5
+ * true
+ *
+ * Second condition:
+ *
+ * a > b
+ * 5 > 9
+ * false
+ *
+ * Therefore:
+ *
+ * true || false
+ * = true
+ *
+ *
+ * ============================================================
+ * 4. LOGICAL NOT (!)
+ * ============================================================
+ *
+ * NOT is used to reverse a boolean value.
+ *
+ * true -> false
+ * false -> true
+ *
+ * Example:
+ *
+ * boolean result = false;
+ *
+ * !result
+ *
+ * Result:
+ *
+ * true
+ *
+ *
+ * Another example:
+ *
+ * boolean result = true;
+ *
+ * !result
+ *
+ * Result:
+ *
+ * false
+ *
+ *
+ * Truth Table:
+ *
+ * Condition Result
+ * -------------------
+ * true false
+ * false true
+ *
+ *
+ * Remember:
+ *
+ * ! -> Reverse the boolean value.
+ *
+ *
+ * ============================================================
+ * 5. SHORT-CIRCUIT OPERATORS
+ * ============================================================
+ *
+ * Java provides short-circuit versions of AND and OR:
+ *
+ * && -> Short-circuit AND
+ * || -> Short-circuit OR
+ *
+ * These operators can avoid evaluating unnecessary
+ * conditions.
+ *
+ *
+ * ============================================================
+ * 6. SHORT-CIRCUIT AND (&&)
+ * ============================================================
+ *
+ * Consider:
+ *
+ * condition1 && condition2
+ *
+ * If condition1 is false, the final result must be false.
+ *
+ * Therefore Java does not need to check condition2.
+ *
+ * Example:
+ *
+ * false && condition2
+ *
+ * Result:
+ *
+ * false
+ *
+ * Since the first condition is already false, checking
+ * the second condition cannot change the result.
+ *
+ * This is called SHORT-CIRCUIT evaluation.
+ *
+ *
+ * Example:
+ *
+ * int x = 7;
+ * int y = 5;
+ *
+ * boolean result = x < y && a > b;
+ *
+ * First condition:
+ *
+ * 7 < 5
+ * false
+ *
+ * Because this is AND and the first condition is false,
+ * Java can skip checking the second condition.
+ *
+ *
+ * ============================================================
+ * 7. SHORT-CIRCUIT OR (||)
+ * ============================================================
+ *
+ * Consider:
+ *
+ * condition1 || condition2
+ *
+ * If condition1 is true, the final result must be true.
+ *
+ * Therefore Java does not need to check condition2.
+ *
+ * Example:
+ *
+ * true || condition2
+ *
+ * Result:
+ *
+ * true
+ *
+ * Since the first condition is already true, checking
+ * the second condition cannot change the result.
+ *
+ * This is also called SHORT-CIRCUIT evaluation.
+ *
+ *
+ * ============================================================
+ * 8. WHY IS IT CALLED SHORT-CIRCUIT?
+ * ============================================================
+ *
+ * Java can stop evaluating conditions as soon as the
+ * final result is already known.
+ *
+ * For AND:
+ *
+ * false && anything
+ *
+ * -> false
+ *
+ * So Java can stop after finding false.
+ *
+ *
+ * For OR:
+ *
+ * true || anything
+ *
+ * -> true
+ *
+ * So Java can stop after finding true.
+ *
+ *
+ * This can save unnecessary computation.
+ *
+ *
+ * ============================================================
+ * 9. USING NOT WITH A BOOLEAN VARIABLE
+ * ============================================================
+ *
+ * Example:
+ *
+ * boolean r = true;
+ *
+ * boolean s = !r;
+ *
+ * Since:
+ *
+ * r = true
+ *
+ * Therefore:
+ *
+ * !r = false
+ *
+ * So:
+ *
+ * s = false
+ *
+ *
+ * Another example:
+ *
+ * boolean r = false;
+ *
+ * boolean s = !r;
+ *
+ * Result:
+ *
+ * s = true
+ *
+ *
+ * ============================================================
+ * 10. COMPLETE EXAMPLE
+ * ============================================================
+ *
+ * int x = 7;
+ * int y = 5;
+ *
+ * int a = 5;
+ * int b = 9;
+ *
+ * boolean result;
+ *
+ *
+ * AND:
+ *
+ * result = x > y && a > b;
+ *
+ * System.out.println(result);
+ *
+ * Output:
+ *
+ * false
+ *
+ *
+ * OR:
+ *
+ * result = x > y || a > b;
+ *
+ * System.out.println(result);
+ *
+ * Output:
+ *
+ * true
+ *
+ *
+ * NOT:
+ *
+ * result = !(a > b);
+ *
+ * Since:
+ *
+ * a > b
+ * 5 > 9
+ * false
+ *
+ * NOT reverses it:
+ *
+ * !false
+ * = true
+ *
+ * Output:
+ *
+ * true
+ *
+ *
+ * ============================================================
+ * 11. LOGICAL OPERATORS - QUICK TABLE
+ * ============================================================
+ *
+ * Operator Name Meaning
+ *
+ * && AND Both true
+ * || OR At least one true
+ * ! NOT Reverse the result
+ *
+ *
+ * ============================================================
+ * 12. AND VS OR
+ * ============================================================
+ *
+ * AND:
+ *
+ * Both conditions must be true.
+ *
+ * true && true
+ * = true
+ *
+ *
+ * OR:
+ *
+ * At least one condition must be true.
+ *
+ * true || false
+ * = true
+ *
+ *
+ * Easy way to remember:
+ *
+ * AND -> ALL conditions must be true.
+ *
+ * OR -> ANY condition can be true.
+ *
+ *
+ * ============================================================
+ * 13. RELATIONAL + LOGICAL OPERATORS
+ * ============================================================
+ *
+ * Relational operators create boolean conditions.
+ *
+ * Example:
+ *
+ * x > y
+ *
+ * Result:
+ *
+ * true / false
+ *
+ * Logical operators can then combine those conditions.
+ *
+ * Example:
+ *
+ * x > y && a > b
+ *
+ * Here:
+ *
+ * x > y -> Condition 1
+ * a > b -> Condition 2
+ *
+ * && -> Combines both conditions
+ *
+ *
+ * ============================================================
+ * 14. MULTIPLE CONDITIONS
+ * ============================================================
+ *
+ * More than two conditions can also be combined.
+ *
+ * Example:
+ *
+ * boolean result =
+ * x > y && a > b && x != a;
+ *
+ * Multiple conditions can be connected using logical
+ * operators.
+ *
+ * Similarly:
+ *
+ * boolean result =
+ * x > y || a > b || x == a;
+ *
+ *
+ * The number of conditions depends on the requirement.
+ *
+ *
+ * ============================================================
+ * 15. IMPORTANT DIFFERENCE
+ * ============================================================
+ *
+ * Single operators:
+ *
+ * & -> Bitwise AND
+ * | -> Bitwise OR
+ *
+ * Short-circuit logical operators:
+ *
+ * && -> Logical AND
+ * || -> Logical OR
+ *
+ * For conditions, the commonly used operators are:
+ *
+ * &&
+ * ||
  *
  * NOTE:
  *
- * The detailed use of logical operators is covered separately.
- *
- *
- * ============================================================
- * 15. WHY RELATIONAL OPERATORS ARE IMPORTANT
- * ============================================================
- *
- * Programs frequently need to compare values and make
- * decisions based on those comparisons.
- *
- * Examples:
- *
- * Is age greater than 18?
- * Is marks greater than or equal to 40?
- * Are two values equal?
- * Are two values different?
- *
- * Relational operators provide the comparison needed for
- * these types of conditions.
+ * The detailed difference between bitwise operators and
+ * logical operators will be covered separately.
  *
  *
  * ============================================================
  * KEY POINTS TO REMEMBER
  * ============================================================
  *
- * 1. Relational operators are used to compare values.
+ * 1. Logical operators are used to combine boolean
+ * conditions.
  *
- * 2. The result of a relational operation is always
- * boolean:
+ * 2. && is the logical AND operator.
  *
- * true
- * false
+ * 3. || is the logical OR operator.
  *
- * 3. < means less than.
+ * 4. ! is the logical NOT operator.
  *
- * 4. > means greater than.
+ * 5. AND returns true only when both conditions are true.
  *
- * 5. == means equal to.
+ * 6. OR returns true when at least one condition is true.
  *
- * 6. != means not equal to.
+ * 7. NOT reverses true to false and false to true.
  *
- * 7. <= means less than or equal to.
+ * 8. && and || are short-circuit operators.
  *
- * 8. >= means greater than or equal to.
+ * 9. For &&, if the first condition is false, the second
+ * condition may not be evaluated.
  *
- * 9. '=' is an assignment operator.
+ * 10. For ||, if the first condition is true, the second
+ * condition may not be evaluated.
  *
- * 10. '==' is a comparison operator.
+ * 11. Relational operators produce boolean values.
  *
- * 11. Relational operators can be used with primitive
- * numeric values.
+ * 12. Logical operators can combine those boolean values.
  *
- * 12. Relational operators are important for creating
- * conditions in programs.
+ * 13. Logical operators are very important when working with
+ * if-else statements and loops.
  *
  *
  * ============================================================
  * QUICK SUMMARY
  * ============================================================
  *
- * < -> Less than
- * > -> Greater than
- * == -> Equal to
- * != -> Not equal to
- * <= -> Less than or equal to
- * >= -> Greater than or equal to
+ * && -> AND
+ * Both conditions must be true.
  *
+ * || -> OR
+ * At least one condition must be true.
  *
- * = -> Assignment
- * == -> Comparison
+ * ! -> NOT
+ * Reverses true/false.
  *
  *
  * Example:
  *
- * int x = 6;
+ * int x = 7;
  * int y = 5;
  *
- * boolean result = x > y;
+ * boolean result = x > y && x != y;
  *
- * System.out.println(result);
+ * // true && true
+ * // true
  *
- * Output:
- *
- * true
  *
  * ============================================================
  */
-
 public class LogicalOperators {
 	public static void main(String[] args) {
 		int x = 7;
