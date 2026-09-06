@@ -12,7 +12,8 @@ public class NeedOfArray {
     // [] indicates that num is an array.
     int num[] = { 5, 6, 7 };
 
-    // Creates an integer array with space for 4 values.
+    // If the values are not known initially,
+    // create an integer array with space for 4 values.
     // new -> Creates a new array.
     // int[4] -> The array size is 4.
     //
